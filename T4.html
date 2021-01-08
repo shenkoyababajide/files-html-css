@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>HTML CSS Styles</title>
+	<style>
+		.test_03 {background-color: black; border: 3px solid blue; color: rgb(250, 250,250);}
+		a:link {color:blue; background-color: none; text-decoration: none;}
+		a:visited {color: purple; background-color: none; text-decoration: none;}
+		a:hover {color: green; background-color: none; text-decoration: underline;}
+		a:active {color: yellow; text-decoration: none;}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css_sample.css">
+</head>
+<body>
+	<button style="float: left; padding: 5px; background-color: white; color: black;" title="Go to previous page;"> <b><a href="T3.html"> Previous </a> </b> </button>
+	<Button style="float: right; padding: 5px; background-color: white; color: black;" title="Go to next page;"> <b><a href="T5.html"> Next </a></b> </button>
+	<br>
+	<h2 id="T4-01">HTML CSS Styling</h2>
+	<p> CSS is Cascading Styles Sheet. It is used to style html elements to various degrees. With CSS, you can control the color, font, the size of text, the spacing between elements, how elements are positioned and laid out, what background images or background colors are to be used, different displays for different devices and screen sizes, and much more! </p><hr>
+	<h3 style="background-color: yellow; border: 2px solid green;" id="T4_02">CSS Documentation</h3>
+	<p>There are three ways to insorporate CSS into an HTML:<br>
+	<ul><li>Inline</li><li>Internal</li><li>External</li></ul>
+	</p>
+	<h4 id="T4_03"><b>EXTERNAL CSS Style</b></h4>
+	<p id="T4_03_a">This is used to add color to the text. The officers of the Association shall consist of a President, a Vice-President, a Secretary, a Treasurer, a President, Sports Director and such other subordinate officers as the Board may appoint or authorize the President to appoint. Two or more offices may be held by the same person, except that the President may not serve as the Secretary or Treasurer. No officer may act in more than one capacity where action of two or more officers is required.</p>
+	<h4 id="T4_04"><b>INTERNAL CSS Style</b></h4>
+	<p class="test_03">This is used to add color to the text. The officers of the Association shall consist of a President, a Vice-President, a Secretary, a Treasurer, a President, Sports Director and such other subordinate officers as the Board may appoint or authorize the President to appoint. Two or more offices may be held by the same person, except that the President may not serve as the Secretary or Treasurer. No officer may act in more than one capacity where action of two or more officers is required.</p>
+	<h4 id="T4_05"><b>INLINE CSS Style</b></h4>
+	<p style="background-color: pink; color: black; border: 3px solid black;">This is used to add color to the text. The officers of the Association shall consist of a President, a Vice-President, a Secretary, a Treasurer, a President, Sports Director and such other subordinate officers as the Board may appoint or authorize the President to appoint. Two or more offices may be held by the same person, except that the President may not serve as the Secretary or Treasurer. No officer may act in more than one capacity where action of two or more officers is required.</p><hr>
+	<h4 id="T4_06"><b>CSS TEXT COLOR, FONT FAMILY, AND FONT SIZE</b></h4>
+	<p><span style="color: darkblue;">This text will have darkblue color.</span><br>
+	<span style="font-family: arial;">This text will have font family of arial.</span><br>
+	<span style="font-size: 15px;">This text will have font size of 15px.</span><br>
+	<span style="color: cyan; font-family: verdana; font-size: 20px;">This text will have cyan color, font family of verdana and 20px font size.</span>
+	</p> <hr>
+	<h4><b>CSS BORDER, PADDING AND MARGIN</b></h4>
+	<p style="background-color: black; border: 2px solid red; color: white;">	Border around element which spans through the length of the webpage </p>
+	<p style="background-color: black; border: 2px solid red; color: white; padding: 8px;">	Padding defines a space between the text and the border </p>
+	<p style="background-color: black; border: 2px solid red; color: white; padding: 8px; margin-right: 75%;">	Margin defines the space outside the border </p> <hr>
+	<h4 style="border: 2.5px solid red; margin-right: 90%; padding: 10px; background-color: green; color: white;"><b>HTML LINKS</b></h4>
+	<p> Links are hyperlinks and are found all around every web page. It helps to link one part of the webpage to another in-page or out-of-page source. A link can be a text, an image, a button, smiley and so on... The link tag is the [a], and its most important attribute the the "href="xxx".</p>
+	<p>By default, links will appear as follows in all browsers:<br>
+	<ol style="background-color: white;">
+	<li><a href="T1.html">An unvisited link is underlined and blue</a></li>
+	<li><a href="T2.html">A visited link is underlined and purple</a></li>
+	<li>An active link is underlined and red</li></ol></p>
+	<h4>TEXT LINKS WITH [target] ATTRIBUTE AND ABSOLUTE URL</h4>
+	<p>Values of [href] attribute is a URL which is considered absolute if it links the page to a document on a different website outside. It has the full description path of the site like "https://www.google.com".The [target] attribute when added to the [a] tag helps to determine where the link opens; on the same page, or on a blank page. The default setting is to open the linked document on the same page. [_self] <a href="https://www.google.com" target="_self">opens the link on the same page</a>, [_blank] <a href="https://www.google.com" target="_blank">opens the linked document on a blank page.</a>, [_parent] <a href="https://www.google.com" target="_parent">opens the link on the parent frame</a>, [_top] <a href="https://www.google.com" target="_top">opens the link in the full body of the window.</a></p>
+	<h4>TEXT LINKS WITH [target] ATTRIBUTE AND RELATIVE URL</h4>
+	<p>Values of [href] attribute is a URL which is considered relative if it links the page to a document on the same website. It does not have the "https://" part, for example "T2.html".The [target] attribute when added to the [a] tag helps to determine where the link opens; on the same page, or on a blank page. The default setting is to open the linked document on the same page. [_self] <a href="T2.html" target="_self">opens the link on the same page</a>, [_blank] <a href="T2.html" target="_blank">opens the linked document on a blank page.</a>, [_parent] <a href="T2.html" target="_parent">opens the link on the parent frame</a>, [_top] <a href="T2.html" target="_top">opens the link in the full body of the window.</a></p>
+	<h4>IMAGE LINKS</h4>
+	<p style="background-color: white;"><a href="T1.html" target="_blank"><img src="images/jidfamlogo_01.png" height="50px" width="120px" alt="JIDFAM Logo" style="float: left;"></a>This is used to add color to the text. The officers of the Association shall consist of a President, a Vice-President, a Secretary, a Treasurer, a President, Sports Director and such other subordinate officers as the Board may appoint or authorize the President to appoint. Two or more offices may be held by the same person, except that the President may not serve as the Secretary or Treasurer. No officer may act in more than one capacity where action of two or more officers is required.</p>
+	<h4>LINKS TO EMAIL</h4>
+	<p>
+		<address>
+			Name: Shenkoya Babajide <br>
+			Email: <a href="mailto:bshenkoya@oauife.edu.ng" target="_blank">bshenkoya@oauife.edu.ng</a><br>
+			Address: 3, Aladanla line 3, beside General, OAUTHC, Ile-Ife, Osun State, Nigeria.<br>
+			Phone No: +2348069200144
+		</address>
+	</p>
+	<h4>BUTTON AS LINK</h4>
+	<p>
+		<button><a href="T3.html" target="_blank" title="JIDFAM PHARMACY STORE">JIDFAM</a></button><br>
+		<button onclick="document.location='default.asp'">JIDFAM</button> Learn more about .asp for this link to work!
+	</p>
+	<h4>TEXT LINK COLORS</h4>
+	<p>The link color can be formatted using the [style] in the head section of the code (INTERNAL CSS Styling). "a:link, a:visited, a:hover, and a:active" is used to format the color, background-color and text-decoration of the link. Text-decoration defines whether the link text should be underlined or not. Using these, the link can be styled to look as though it was a button. Check below:<br><br>
+	<span style="font-size: 20px; background-color: blue; padding: 5px; border-radius: 15px;"><a href="T3.html"><b>GO TO JIDFAM STORE</b></a></span></p>
+	<h4>USE LINK TO BOOKMARK PAGE</h4>
+	<p>Here, a link is used to jump to a section of a webpage, or to connect a section of another webpage. This is particularly useful if you are dealing with a very long document. The section to be linked must have been given a unique id to which the link tag is referenced. Check below to go to different sections of this page and other pages directly. <br>
+	<ul>
+	<li><span><a href="#T4-01">Click here to learn HTML CSS Styling (on page)</a></span><br></li>
+	<li><span><a href="T3.html#T3_01" target="_blank"> Click here to learn HTML Standard Color names (another page)</a></span><br></li>
+	<li><span><a href="T2.html#T2_06" target="_blank"> Click here to learn HTML comment (another page)</a></span><br></li>
+	<li><span><a href="T1.html#T1_05" target="_blank"> Click here to learn HTML break tag (another page)</a></span><br></li>
+	</ul>
+	</p>
+	<button style="float: left; padding: 5px; background-color: white; color: black;" title="Go to previous page;"> <b><a href="T3.html"> Previous </a> </b> </button>
+	<Button style="float: right; padding: 5px; background-color: white; color: black;" title="Go to next page;"> <b><a href="T5.html"> Next </a></b> </button>
+</body>
+</html>

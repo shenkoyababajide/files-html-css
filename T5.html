@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Image</title>
+	<style>
+	table, th, td {
+		border: 2px solid green;
+		border-collapse: collapse;
+	}
+	th, td {
+		text-align: center;
+	}
+
+
+	.test-cover {
+		background-color: grey;
+		height: 500px;
+		width: 200px;
+	}
+
+	.test:nth-child(odd){
+		background-color: green;
+		width: 150px;
+		height: 90px;
+		margin-bottom: 5px;
+	}
+
+		.test:nth-child(even){
+		background-color: yellow;
+		width: 150px;
+		height: 90px;
+		margin-bottom: 5px;
+	}
+
+	body {background-color: rgba(250, 250, 0, 0.25);
+	</style>
+</head>
+<body>
+	<button style="float: left; padding: 5px; background-color: white; color: black;" title="Go to previous page;"> <b><a href="T4.html"> Previous </a> </b> </button>
+	<Button style="float: right; padding: 5px; background-color: white; color: black;" title="Go to next page;"> <b><a href="T6.html"> Next </a></b> </button><br>
+<h3>HTML Images</h3>
+<p> <img src="images/drugs_05.jpg" alt="Image for Relative URL" style="float: right; height: 100px; width: 150px;"> <img src="images/movingdog.gif" style="float: left;">
+	To add image, we use the [img] tag and it doesn't have a closing tag. The source or path [src] to the images is provided through URL which could be absolute or relative inside [src] attribute. Also, the [alt] attribute is used to provide a description of the image, so that if browser failed to load the image correctly, the alt text would appear and it is also useful for screen readers. [width] and [height] attribute is also often added to specify the image width and height, it is prefarrable to use CSS style to add this, so that internal or external CSS styling will not affect the dimension specified. The two images below are added through absolute and relative method.<br>
+<img src="https://image.shutterstock.com/image-photo/very-nice-emotional-image-beautiful-600w-255553666.jpg" alt="Image for Absolute URL" width="500px" height="300px">
+<img src="https://cdn.pixabay.com/photo/2017/03/12/16/00/blue-2137334__340.jpg" style="height: 300px; width: 500px;">
+</p><hr>
+<h3>HTML Image Maps</h3>
+<p style="font-size: 25px; font-family: verdana;">Image maps are used to create clickable areas within an image. The HTML [map] tag defines an image map, an image map is an image with clickable areas. The areas are defined with one or more [area] tags. Generating the coordinates may seem kind of cumbersome but you can generate these coordinated from <a href="https://www.image-map.net/" target="_blank">here</a><br><img src="images/freelance_02.jpg" usemap="#romance">
+	<map name="romance">
+		<area shape="poly" coords="246,546,188,490,174,462,177,408,190,361,182,303,205,274,245,253,245,231,286,227,284,204,293,187,308,155,341,138,377,139,407,153,425,189,431,224,423,253,391,284,378,308,354,341,368,340,390,319,418,287,449,325,420,346,388,384,357,402,339,407,337,425,366,478,409,524,415,567,315,588,204,588" href="T3.html" target="_blank" title="Adorable Little Baby">
+		<area shape="poly" coords="728,367,999,350,1000,435,925,619,754,666,625,666,416,608,406,588,647,546,655,556" href="T2.html" target="_blank" title="Laptop">
+	</map>
+	<img src="images/romance_1.jpg" usemap="#romance_1">
+	<map name="romance_1">
+		<area shape="poly" coords="585,440,576,451,579,464,567,473,580,506,572,517,578,553,575,591,595,584,588,543,601,546,599,585,607,584,606,555,622,588,627,582,611,544,631,527,605,500,619,486,619,463,605,446" href="T1.html" target="_blank" title="Two Lovebirds">
+	</map>
+</p> <hr>
+<h3>BACKGROUND IMAGES</h3>
+<div style="border: 2px; margin: 20px; background-image: url('images/pharmacy_01.jpg'); width: 45%;">
+	<p style="font-size: 20px;"><b>I LIKE THIS IMAGE BECAUSE IT HAS PRESCRIPTION BOTTLES IN IT<b><br>
+		You can specify background images<br>
+		for any visible HTML element.<br>
+		In this example, the background image<br>
+		is specified for a div element.<br>
+		By default, the background-image<br>
+		will repeat itself in the direction(s)<br>
+		where it is smaller than the element<br>
+		where it is specified. (Try resizing the<br>
+		browser window to see how the<br>
+		background image behaves.
+	</p>
+</div>
+<div style="background-image: url('images/freelance_02.jpg'); width: 45%; background-size: cover; background-attachment: fixed;">
+	<p>ANOTHER IMAGE<br>
+		You can specify background images<br>
+		for any visible HTML element.<br>
+		In this example, the background image<br>
+		is specified for a div element.<br>
+		By default, the background-image<br>
+		will repeat itself in the direction(s)<br>
+		where it is smaller than the element<br>
+		where it is specified. (Try resizing the<br>
+		browser window to see how the<br>
+		background image behaves.
+	</p>
+</div>
+<div style="width: 100%; background-image: url('images/smiley.gif'); background-repeat:repeat;">
+	There is going to be war!!!
+	You can specify background images<br>
+		for any visible HTML element.<br>
+		In this example, the background image<br>
+		is specified for a div element.<br>
+		By default, the background-image<br>
+		will repeat itself in the direction(s)<br>
+		where it is smaller than the element<br>
+		where it is specified. (Try resizing the<br>
+		browser window to see how the<br>
+		background image behaves.
+</div><hr>
+<h3>Use of [picture] element for inserting picture</h3>
+<p>The HTML [picture] element gives web developers more flexibility in specifying image resources. The [picture] element contains one or more [source] elements, each referring to different images through the srcset attribute. This way the browser can choose the image that best fits the current view or choose the next available image should any of the image fails to load.</p>
+	<picture>
+		<source media="(min-width: 650px)" srcset="images/freelance_01.jpg">
+  		<source media="(min-width: 465px)" srcset="images/freelance_02.jpg">
+  		<img src="images/freelance_03.jpg">
+	</picture>
+
+<table style="width: 50%;">
+	<tr>
+		<th> 1 </th>
+		<td> a </td>
+		<td> c </td>
+	</tr>
+	<tr>
+		<th rowspan="3"> 2 </th>
+		<td> (i) </td>
+		<td> (ii) </td>
+	</tr>
+	<tr>
+		<td> (a) </td>
+		<td> (b) </td>
+	</tr>
+	<tr>
+		<td> (m) </td>
+		<td> (n) </td>
+	</tr>
+</table>
+
+<div class="test-cover">
+	<div class="test">Go Daddy</div>
+	<div class="test">Go Daddy</div>
+	<div class="test">Go Daddy</div>
+	<div class="test">Go Daddy</div>
+	<div class="test">Go Daddy</div>
+</div>
+</body>
+</html>

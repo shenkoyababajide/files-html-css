@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML Forms</title>
+	<style>
+		* {box-sizing: border-box;}
+		@media screen and (max-width: 600px){
+			.back {width: 100%; height: auto;}
+		}
+	</style>
+</head>
+<body>
+<div style="position: fixed; background-color: grey; padding: 5px; width: 100%;">
+	<button style="background-color: white; padding: 5px;"><b><a href="T10.html">Previous</a></b></button>
+	<button style="background-color: white; float: right; padding: 5px;"><b><a href="T12.html">Next</a></b></button>
+</div>
+	<br><br>
+<h2>HTML Forms</h2>
+<div class="back" style="height: auto; background-color: yellow; padding-left: 30px; padding-top: 15px; width: 350px; border-radius: 8px;">
+	<form action="/action_page.php" target="_blank" method="post" autocomplete="on">
+	<fieldset>
+		<legend>PERSONAL INFORMATION</legend>
+		<label for="fname">First Name</label><br>
+		<input type="text" id="fname" name="fname" value="" style="height: 36px; border-radius: 5px;" placeholder="Enter Your Given Name" required="" autofocus=""><br><br>
+
+		<label for="mname">Middle Name</label><br>
+		<input type="text" id="mname" name="mname" value="Segun" style="height: 36px; border-radius: 5px;" placeholder="Enter Your Middle Name" readonly="" size="30"><br><br>
+
+		<label for="lname">Last Name</label><br>
+		<input type="text" id="lname" name="lname" value="Shenkoya" style="height: 36px; border-radius: 5px;" placeholder="Enter Your Surname" disabled="" size="40"><br><br>
+
+		<label for="phone">Phone Number</label><br>
+		<input type="tel" id="phone" name="phone" value="" style="height: 36px; border-radius: 5px;" placeholder="0801-234-5678" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" maxlength="14" required="" size="50"><br><br>
+
+		<label for="email">Student Email</label><br>
+		<input type="Email" id="email" name="email" value="" style="height: 36px; border-radius: 5px;" placeholder="xyz@123.com" required="" size="60"><br><br>
+
+		<label for="password">Password</label><br>
+		<input type="Password" id="password" name="password" value="" style="height: 36px; border-radius: 5px;" placeholder="Enter Your Password" size="70"><br>
+
+		<p>Gender</p>
+		<input type="radio" id="male" name="gender" value="male">
+		<label for="male">Male</label> <br><br>
+		<input type="radio" id="male" name="gender" value="female">
+		<label for="female">Female</label> <br>
+	</fieldset><br>
+	<fieldset>
+		<legend>COURSE INFORMATION</legend>
+		<p>Check subjects applicable to you</p>
+		<input type="checkbox" id="chm" name="chm" value="Chemistry" checked="chm">
+		<label for="chm">Chemistry</label><br>
+		<input type="checkbox" id="phy" name="phy" value="Physics">
+		<label for="phy">Physics</label><br>
+		<input type="checkbox" id="mth" name="mth" value="Maths">
+		<label for="mth">Maths</label>
+		<br><br>
+
+		<label for="courses">Course Level</label>
+		<select id="courses" name="courses" size="1" style="height: 30px; border-radius: 5px; width: 150px;">
+			<option value="100 Level">100 Level</option>
+			<option value="200 Level">200 Level</option>
+			<option value="300 Level">300 Level</option>
+			<option value="400 Level">400 Level</option>
+			<option value="500 Level">500 Level</option>
+			<option value="" selected></option>
+		</select><br><br>
+
+		<p>Program Feedback</p>
+		<textarea style="height: 150px;"></textarea><br>
+
+		<button type="button" onclick="alert('Hello JIDFAM Limited. Clicked successfully')">Click Me!</button><br><br>
+
+		<label>Department</label>
+		<input list="departments" name="department">
+		<datalist id="departments">
+			<option value="Pharmacy">
+			<option value="Chemical Engineering">
+			<option value="Computer Science">
+			<option value="Botany">
+			<option value="Biochemistry">
+			<option value="History">
+		</datalist><br><br>
+
+		<label for="favcolor">Select your favorite color:</label><br>
+		<input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
+		
+		<label for="mob">Month of Birth</label><br>
+		<input type="month" id="mob" name="mob" min="1986-01"><br><br>
+
+		<label for="dob">Date of Birth</label><br>
+		<input type="date" id="dob" name="dob" min="2020-01-01"><br><br>
+
+		<label for="cel">Date and Time of Celebration</label><br>
+		<input type="datetime-local" id="cel" name="cel" min="2020-09-23"><br><br>
+
+		<label for="week">Select A Week:</label><br>
+		<input type="week" id="week" name="week"><br><br>
+
+		<label for="choosefile">Select A File</label><br>
+		<input type="File" id="choosefile" name="choosefile" required=""><br><br>
+
+		<label for="qty">Choose A Number</label> <br>
+		<input type="number" id="qty" name="qty" min="0" max="100" step="5"><br><br>
+
+		<label for="vol">Volume</label><br>
+		<input type="range" id="vol" name="vol" min="0" max="100"><br><br>
+
+		<label for="psearch">Search:</label>
+		<input type="search" id="psearch" name="psearch"><br><br>
+
+		<label for="appt">Preferred Time of Appointment:</label><br>
+		<input type="time" id="appt" name="appt"><br><br>
+
+		<label for="social">Your facebook URL:</label><br>
+		<input type="url" id="social" name="social"><br><br>
+
+
+
+		<br><br>
+		<input type="submit" name="submit" value="Submit" style="height: 36px; border-radius: 5px;">
+		<input type="reset" name="reset" value="Reset" style="height: 36px; border-radius: 5px;"><br><br>		
+	</fieldset>
+	</form>
+</div>
+
+<p>BABA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JIDE</p>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navigation Bar, ID/Class, and Iframes</title>
+	<link href='https://fonts.googleapis.com/css?family=Autour One' rel='stylesheet'>
+	<style>
+		*{font-family: 'Author one'; font-size: 20px;}
+		body {background-color: rgba(200, 124, 35, 0.55);}
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: purple;
+		}
+
+		li {
+		  float: left;
+		}
+
+		li a {
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 16px;
+		  text-decoration: none;
+		}
+
+		li a:hover {
+		  background-color: #111111;
+		}
+		.C1 {background-color: grey;}
+		.C2 {color: blue; background-color: yellow; text-align: justify;}
+		.sub {text-decoration: underline;}
+		#test {color: white; background-color: black;}
+	</style>
+</head>
+<body>
+	<div style="position: fixed; width: 99%; background-color: transparent;">
+	<button style="padding: 5px; background-color: white; color: black; float: left;" title="Go to previous page;"> <b><a href="T7.html"> Previous </a> </b> </button>
+	<Button style="padding: 5px; background-color: white; color: black; float: right;" title="Go to next page;"> <b><a href="T9.html"> Next </a></b> </button><br>
+	</div><br>
+	<h2>Navigation Menu</h2>
+<p>In this example, we use CSS to style the list horizontally, to create a navigation menu:</p>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+<div class="C1">
+	<h1>Use of Class</h1>
+	<p class="C2">CHEMISTRY<br>Study of chemical substances and their reactions</p>
+	<p class="C2">PHYSICS<br>Study of physical materials and their applications</p>
+	<p class="C2 sub">PHARMACY<br>Study of the use of substances as pharmaceuticals</p>
+	<p id="test">PHARMACY<br>Study of the use of substances as pharmaceuticals (Using ID)</p>
+</div>
+<div>
+	<h2>Use of iframes</h2>
+	<p>Used to display a webpage within a webpage, like below</p>
+	<iframe src="T3.html" title="My WebPage" height="400px" width="750px" style="border:none;"></iframe>
+	<iframe src="images/pharmacy_02.jpg" title="HTML Learning Page" height="400px" width="750px"></iframe>
+</div>
+</body>
+</html>

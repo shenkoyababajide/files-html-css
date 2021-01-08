@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML Layouts</title>
+	<style>
+		* {box-sizing: border-box;}
+		header {background-color: purple; padding: 40px; margin-top: 3px; color: white; text-align: center; font-size: 30px; font-family: verdana;}
+		nav {background: cyan; width: 25%; height: 500px; float: left;}
+		nav ul {list-style-type: none; font-size: 20px; color: white;}
+		nav ul li {margin: 30px; background-color: blue; padding: 20px;}
+		article {background-color: black; color: white; font-size: 20px; width: 75%; height: 500px; float: left; text-align: justify;}
+		/* This is used to clear all the previous column formats and give way to new formatting subsequently*/
+		section:after {content: ""; display: table; clear: all;}
+		footer {width: 100%; background-color: red; color: white; font-size: 16px; text-align: center; padding: 20px;}
+		.left {background-color: green; padding: 20px; text-align: center; float: left; width: 25%; color: white; font-size: 16px;}
+		.main {background-color: powderblue; padding: 20px; text-align: center; float: left; width: 50%; color: white; font-size: 16px;}
+		.right {background-color: magenta; padding: 20px; text-align: center; float: left; width: 25%; color: white; font-size: 16px;}
+		aside {
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
+  background-color: lightgray;}
+  details > summary {
+  padding: 14px;
+  width: 200px;
+  background-color: pink;
+  border: none;
+  box-shadow: 1px 3px 8px pink;
+  cursor: pointer;
+}
+
+details > p {
+  background-color: #eeeeee;
+  padding: 4px;
+  margin: 0;
+  box-shadow: 1px 1px 2px #bbbbbb;
+}
+				/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens. Always put at the bottom of the page to cover all the elements*/
+		@media screen and (max-width: 800px) {
+		nav, article, .left, .main, .right {width: 100%; height: auto;}
+		}
+</style>
+</head>
+<body style="margin: 0px;">
+	<div style="position: fixed; background-color: grey; padding: 5px; width: 100%;"><button style="background-color: white; padding: 5px;"><b><a href="T9.html">Previous</a></b></button> <button style="background-color: white; float: right; padding: 5px;"><b><a href="T11.html">Next</a></b></button></div>
+	<br><br>
+	<div style="width: 100%;"><img src="images/jidfamlogo_01.png"></div>
+<header> 
+	<h2> Cities </h2> 
+	<label for="psearch">Search:</label>
+	<input type="Search" id="psearch" name="psearch"> <input type="submit" name="submit">
+</header>
+<section>
+	<nav>
+		<ul>
+			<li> Ijebu Ode </li>
+			<li> Ile Ife</li>
+			<li> Ondo </li>
+			<li> Ibadan </li>
+		</ul>
+	</nav>
+	<article>
+		<h2> My Love </h2>
+		<p> To add image, we use the [img] tag and it doesn't have a closing tag. The source or path [src] to the images is provided through URL which could be absolute or relative inside [src] attribute. Also, the [alt] attribute is used to provide a description of the image, so that if browser failed to load the image correctly, the alt text would appear and it is also useful for screen readers. [width] and [height] attribute is also often added to specify the image width and height, it is prefarrable to use CSS style to add this, so that internal or external CSS styling will not affect the dimension specified. The two images below are added through absolute and relative method.</p>
+	</article>
+</section>
+<footer><p>This is my footer (c) 2020. JhideXs Production</p></footer>
+<hr>
+<div class="left"><p>Left idea</p></div>
+<div class="main"><p>Main idea</p></div>
+<div class="right"><p>Right idea</p></div>
+
+<p> x<sup>2</sup> = 5; <br>
+	y<sup>3</sup> = 6; <br>
+	z = x<sup>2</sup> + y<sup>3</sup>;
+</p>
+
+<code> x<sup>2</sup> = 5; <br>
+	y<sup>3</sup> = 6; <br>
+	z = x<sup>2</sup> + y<sup>3</sup>;
+</code>
+
+1/2 x <var>b</var> x <var>h</var> <br>
+
+<sup>321</sup>&frasl;<sub>342</sub>
+
+<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+
+<aside>
+<p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</aside>
+
+<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+<figure>
+	<img src="images/neonlogo.jpg">
+	<figcaption>Fig1: Neon logo for Jidfam Limited</figcaption>
+</figure>
+
+<h1>The details and summary elements + CSS</h1>
+
+<details>
+  <summary>Epcot Center</summary>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</details>
+
+<p><b>Note:</b> The detail tag is not supported in Edge (prior version 79).</p>
+Note:</b> The details tag is not supported in Edge (prior version 79). &copy; c---d B&#770; Check here for more on other <a href="https://www.w3schools.com/html/html_symbols.asp" style="padding: 5px; background-color: purple;color: white;">HTML symbols</a>
+<h2>Emojis</h2>
+<p>
+	&#128516; &#128525; &#128151; <br>
+	For other types of emojis, <a href="https://www.w3schools.com/charsets/ref_emoji.asp" style="padding: 5px; background-color: purple;color: white;">Click here</a>
+</p>
+<p>For HTML code validation and check, <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fhtml_validate.html#file" style="padding: 5px; background-color: blue;color: white;">Click here</a></p>
+</body>
+</html>
