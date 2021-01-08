@@ -1,0 +1,22 @@
+$primaryColor: rgb(8, 59, 102);
+$overlayColor: rgba(8, 59, 102, 0.8);
+$secondaryColor: rgba(9, 95, 37, 0.45);
+$textColor: white;
+$font-primary: 'Inconsolata', monospace;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $font-primary;
+}
+
+body{
+    background-color: lighten($primaryColor, 75%);
+    line-height: 30px;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}

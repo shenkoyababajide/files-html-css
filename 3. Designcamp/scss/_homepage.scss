@@ -1,0 +1,321 @@
+.showcase{
+    background-image: url(../image/showcase3.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: calc(100vh - 65px);
+    width: 100%;
+    top: 65px;
+
+    & .showcase-transparent{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        align-self: left;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(8, 59, 102, 0.2);
+
+        .promo-ad{
+            color: $textColor;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgba(255, 0, 0, 0.6);
+            border-radius: 0 0 45% 45%;
+            width: 180px;
+            height: 70px;
+            position: absolute;
+            top: 0px;
+            align-self: center;
+            display: none;
+
+            h3, p{
+                text-shadow: none;
+                line-height: 15px;
+            }
+        }
+
+        h1 span, h1{
+            color: white;
+            // color: lighten($primaryColor, 65%);
+            display: block;
+            letter-spacing: 2px;
+            font-size: 45px;
+            line-height: 40px;
+            text-align: left;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        h1{
+            color: lighten($primaryColor, 65%);
+            // color:$textColor;
+            text-shadow: 2px 2px 6px black;
+            text-align: left;
+            margin-left: 40px;
+            padding: 5px 0px;
+        }
+
+        p{
+            color:$textColor;
+            text-align: left;
+            margin-left: 40px;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        div.showcase-btn{
+            margin-top: 10px;
+            color:$textColor;
+            text-shadow: 2px 2px 6px black;
+            text-align: left;
+            margin-left: 40px;
+            padding: 5px 0px;
+
+            a.showcase-btn-transparent{
+                border: 1px solid white;
+                background: transparent;
+                color: white;
+                text-decoration: none;
+                padding: 10px 20px;
+                margin-top: 30px;
+                z-index: 5;
+                box-shadow: 2px 2px 6px white;
+                font-size: 18px;
+            }
+    
+            a.showcase-btn-transparent:hover{
+                background: lighten($primaryColor, 65%);
+                transition: all 0.25s ease-in-out;
+                color:$primaryColor;
+            }
+        }
+    }
+}
+
+.homepage-content{
+    margin-top: 80px;
+
+    p{
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    img{
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    hr{
+        background-color: $primaryColor;
+        width: 100%;
+        margin: 5px auto;
+    }
+
+    .why-should-i{
+        text-align: center;
+        color: lighten($primaryColor, 60%);
+        text-shadow: 1px 1px lighten($primaryColor, 80%);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-shadow: 1px 1px 5px solid lighten($primaryColor, 65%);
+        margin: 120px auto 30px auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: $primaryColor;
+    }
+
+    strong{
+        color: $primaryColor;
+    }
+}
+
+@media screen and(min-width: 768px){
+    .showcase{
+        height: calc(100vh - 80px);
+        top: 80px;
+    
+        & .showcase-transparent{
+            background-color: rgba(8, 59, 102, 0.3);
+        
+            h1 span, h1{
+                letter-spacing: 3px;
+                font-size: 100px;
+                line-height: 90px;
+            }
+    
+            h1{
+                text-shadow: 3px 3px 15px black;
+                margin-left: 60px;
+                padding: 10px 0px;
+            }
+    
+            p{
+                margin-left: 65px;
+                margin-top: 20px;
+                font-size: 30px;
+                padding-bottom: 40px;
+            }
+    
+            div.showcase-btn{
+                margin-top: 30px;
+                margin-left: 65px;
+                padding: 15px 0px;
+    
+                a.showcase-btn-transparent{
+                    border: 2px solid white;
+                    padding: 20px 60px;
+                    box-shadow: 3px 3px 15px white;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    
+    .homepage-content{
+        margin-top: 150px;
+    
+        p{
+            font-size: 26px;
+            line-height: 40px;
+        }
+    
+        img{
+            margin: 20px auto;
+        }
+    
+        hr{
+            margin: 5px auto;
+        }
+    
+        h1.why-should-i{
+            font-size: 40px;
+            background-color: $primaryColor;
+            padding: 20px 0px;
+            color: lighten($primaryColor, 60%);
+            text-shadow: 2px 2px lighten($primaryColor, 80%);
+        }
+    
+        strong{
+            font-size: 32px;
+        }
+    }
+}
+
+@media screen and(min-width: 1024px) {
+    .desktop-media{
+        width: 100vw;
+        height: 100vh;
+
+        .video-transparent{
+            z-index: 5;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+
+            h1 span, h1{
+                color: white;
+                letter-spacing: 3px;
+                font-size: 100px;
+                text-align: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+    
+            h1{
+                color: lighten($primaryColor, 55%);
+                text-shadow: 2px 2px 6px black;
+                text-align: center;
+                padding: 35px 0px;
+            }
+    
+            p{
+                color:$textColor;
+                text-align: center;
+                margin-top: 10px;
+                font-size: 25px;
+            }
+    
+            .showcase-btn{
+                margin-top: 30px;
+    
+                .showcase-btn-transparent{
+                    border: 1px solid white;
+                    background: transparent;
+                    color: white;
+                    text-decoration: none;
+                    padding: 10px 35px;
+                    box-shadow: 1px 1px 4px white;
+                    font-size: 18px;
+                }
+        
+                .showcase-btn-transparent:hover{
+                    background: lighten($primaryColor, 65%);
+                    transition: all 0.25s ease-in-out;
+                    color:$primaryColor;
+                }
+            }    
+        }
+
+        video{
+            object-fit: cover;
+            width: 100%;
+            overflow: hidden;
+            height: 100vh;
+        }
+    }
+
+    .showcase{
+        display: none;
+    }
+    
+    .homepage-content{
+        margin-top: 100px;
+    
+        p{
+            font-size: 20px;
+            text-align: justify;
+        }
+    
+        img{
+            width: 100%;
+            margin: 10px auto;
+        }
+    
+        hr{
+            background-color: $primaryColor;
+            width: 100%;
+            margin: 5px auto;
+        }
+    
+        .why-should-i{
+            text-align: center;
+            color: lighten($primaryColor, 60%);
+            text-shadow: 1px 1px lighten($primaryColor, 80%);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-shadow: 1px 1px 5px solid lighten($primaryColor, 65%);
+            margin: 120px auto 80px auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: $primaryColor;
+        }
+    
+        strong{
+            color: $primaryColor;
+            font-size: 45px;
+        }
+
+        .split-about{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin: 20px 0px;
+        }
+    }
+}

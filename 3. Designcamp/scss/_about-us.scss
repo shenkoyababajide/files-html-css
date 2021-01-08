@@ -1,0 +1,148 @@
+.about-showcase{
+    background-image: url(../image/oau-img.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: calc(60vh - 65px);
+    width: 100%;
+    top: 65px;
+
+    & .about-showcase-transparent{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        align-self: left;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // background-color: rgba(8, 59, 102, 0.1);
+
+        h1 span{
+            color: white;
+            display: block;
+            letter-spacing: 1px;
+            font-size: 35px;
+            line-height: 40px;
+            text-align: left;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        h1{
+            display: block;
+            letter-spacing: 1px;
+            font-size: 35px;
+            line-height: 40px;
+            text-align: left;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: lighten($primaryColor, 65%);
+            text-shadow: 2px 2px 6px black;
+            margin-left: 150px;
+            margin-top: 70px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+    }
+}
+
+.about-content{
+    margin-top: 80px;
+
+    p{
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    img{
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .about-showcase{
+        height: calc(60vh - 85px);
+        top: 85px;
+    
+        & .about-showcase-transparent{    
+            h1 span{
+                font-size: 60px;
+                line-height: 70px;
+            }
+    
+            h1{
+                font-size: 80px;
+                line-height: 70px;
+                text-shadow: 3px 3px 15px black;
+                margin-left: 350px;
+                margin-top: 70px;
+                padding: 30px;
+                background-color: rgba(255, 255, 255, 0.4);
+            }
+        }
+    }
+    
+    .about-content{
+        margin-top: 130px;
+    
+        p{
+            font-size: 30px;
+            line-height: 45px;
+            text-align: justify;
+        }
+    
+        img{
+            width: 100%;
+            margin: 20px auto;
+        }
+    }
+}
+
+@media screen and(min-width: 1024px) {
+    .about-showcase{
+        background-image: url(../image/oau-img4.jpg);
+        background-position: top;
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        top: 0px;
+    
+        & .about-showcase-transparent{
+            background-color: rgba(8, 59, 102, 0.3);
+    
+            h1 span{
+                font-size: 65px;
+                line-height: 70px;
+            }
+    
+            h1{
+                font-size: 65px;
+                line-height: 70px;
+                color: lighten($primaryColor, 65%);
+                text-shadow: 2px 2px 6px black;
+                margin-left: 600px;
+                margin-top: 70px;
+                padding: 20px;
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+    
+    .about-content{
+        margin-top: 50px;
+    
+        p{
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: justify;
+            line-height: 60px;
+        }
+    
+        img{
+            width: 100%;
+            margin: 30px auto;
+        }
+    }
+}

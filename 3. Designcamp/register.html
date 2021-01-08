@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesignCamp</title>
+    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/b206c9f766.js"></script>
+</head>
+<body>
+    <nav class="desktop">
+        <div class="logo">
+            <img src="./image/designcamp_logo2.png" alt="DesignCamp logo">
+        </div>
+
+        <div class="nav-list">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="register.html" class="active">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="mobile">
+        <div class="menu-wrap">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger"><div></div></div>
+            <div class="menu">
+                <div>
+                    <div>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="register.html" class="active">Register</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="logo">
+        </div>
+    </nav>
+
+    <div class="topnav-setter"></div>
+
+    <section class="registration-wrapper">
+        <div class="transparent">
+            <div class="logo">
+                <img src="./image/designcamp_logo.png" alt="DesignCamp logo">
+                <h1>Congratulations!</h1>
+                <h2>Taking The Bold Step</h2>
+            </div>
+            <br>
+            <div class="form">
+                <div class="input">
+                    <div>
+                        <div class="label"><label for="full-name">FULL NAME</label></div>
+                        <div class="input"><input type="text" placeholder="Your Full Name"></div>
+                    </div>
+
+                    <div>
+                        <div class="label"><label for="email-address">EMAIL</label></div>
+                        <div class="input"><input type="text" placeholder="Your Email Address"></div>
+                    </div>
+
+                    <div>
+                        <div class="label"><label for="email-address">PHONE NUMBER</label></div>
+                        <div class="input"><input type="tel" placeholder="Your Phone Number"></div>
+                    </div>
+
+                    <div>
+                        <div class="label"><label for="program">CHOOSE A PATH</label></div>
+                        <div class="course-selection">
+                            <input type="radio" name="course" checked> Beginner <br>
+                            <input type="radio" name="course"> Intermediate
+                        </div>
+                    </div>
+
+                    <div class="submit">
+                        <a href="#">SUBMIT</a>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>

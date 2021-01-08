@@ -1,0 +1,339 @@
+nav.mobile {
+    height: 65px;
+    width: 100%;
+    background-color: lighten($primaryColor, 55%);
+    position: fixed;
+    z-index: 10;
+}
+
+nav.mobile .menu-wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    .toggler{
+        position: absolute;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .hamburger{
+        position: absolute;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 2px;
+        left: 5px;
+        z-index: 1;
+        width: 60px;
+        height: 60px;
+        padding: 1rem;
+
+        div{
+            position: relative;
+            width: 100%;
+            height: 2px;
+            background-color: $primaryColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div::before, div::after{
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 0px;
+            width: 100%;
+            height: 2px;
+            background-color: $primaryColor
+        }
+
+        div::after{
+            top: 10px;
+        }
+    }
+
+    
+    //toggler animation upon checked state
+    .toggler:checked + .hamburger>div{
+        transform: rotate(135deg);
+    }
+
+    //Turn lines into X
+    .toggler:checked + .hamburger>div::before,
+    .toggler:checked + .hamburger>div::after{
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    // //Rotate on hover
+    // .toggler:checked:hover + .hamburger>div{
+    //     transform: rotate(225deg);
+    // }
+
+    .menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > div{
+            background: lighten(rgba(0, 0, 0, 0.85), 85%);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50vw;
+            height: 100vh;
+            display: flex;
+            flex: none;
+            justify-content: center;
+            translate: Y(-100px);
+            // transition: all 0.25s ease-in-out;
+            // transform: scale(0);
+            // transition: all 0.4s ease;
+
+            & > div{
+                text-align: left;
+                max-width: 90vw;
+                max-height: 100vh;
+                opacity: 0;
+                transition: opacity 0.4s ease;
+
+                ul{
+                    list-style: none;
+                    color: $primaryColor;
+                    font-size: 1.5rem;
+                    padding: 1 rem;
+                    margin-top: 70px;
+
+                    li{
+                        padding: 10px 0;
+                    }
+
+                    a{
+                        color: $primaryColor;
+                        text-decoration: none;
+                    }
+
+                    a:hover{
+                        color: $textColor;
+                        transition: color 0.4s ease;
+                    }
+
+                    .active{
+                        background-color: $primaryColor;
+                        color: white;
+                        padding: 7px 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu-wrap .toggler:checked ~ .menu{
+    visibility: visible;    
+}
+
+.menu-wrap .toggler:checked ~ .menu > div{
+    translate: Y(100px);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div{
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+nav.mobile .logo{
+    position: fixed;
+    top: 0px;
+    right: 10px;
+    background-image: url("../image/designcamp_logo2.png");
+    background-size: cover;
+    width: 65px;
+    height: 65px;
+}
+
+.desktop{
+    display: none;
+}
+.desktop-media{
+    display: none;
+}
+
+section.socials{
+    position: relative;
+    z-index: 10;
+
+    .fixed-socials{
+        position: fixed;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        left: 0px;
+        bottom: 0px;
+        background-color: rgba(255, 255, 255, 0.3);
+        width: 35px;
+        height: 190px;
+        z-index: 1000;
+
+        a .fab{
+            color: $primaryColor;
+            font-size: 30px;
+            align-self: center;
+        }
+    }
+}
+
+@media screen and(min-width: 768px){
+    nav.mobile {
+        height: 85px;
+    }
+    
+    nav.mobile .menu-wrap{
+        top: 0;
+        left: 10px;
+        
+        .toggler{
+            width: 70px;
+            height: 70px;
+            top: 10px;
+            left: 10px;
+        }
+    
+        .hamburger{
+            width: 80px;
+            height: 80px;
+        
+            div::before, div::after{
+                top: -15px;
+            }
+    
+            div::after{
+                top: 15px;
+            }
+        }
+    
+        .menu{
+            & > div{  
+                & > div{
+                    ul{
+                        margin-top: 100px;
+    
+                        li{
+                            padding: 25px 0;
+                        }
+    
+                        a{
+                            font-size: 24px;
+                        }
+    
+                        .active{
+                            padding: 15px 80px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    nav.mobile .logo{
+        top: 4px;
+        right: 15px;
+        width: 75px;
+        height: 75px;
+    }
+    
+    section.socials{    
+        .fixed-socials{
+            width: 60px;
+            height: 250px;
+    
+            a .fab{
+                font-size: 43px;
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 1024px) {
+    nav.mobile {
+        display: none;
+    }
+
+    .desktop-media{
+        display: unset;
+    }
+
+    nav.desktop{
+        display: unset;
+        height: 40px;
+        width: 100%;
+        margin: 20px;
+        margin-top: 30px;
+        background-color: transparent;
+        position: absolute;
+        top: 0px;
+        z-index: 20;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        align-self: center;
+
+        .logo{
+            border-right: 3px solid lighten($primaryColor, 55%);
+
+            img{
+                width: 80px;
+                margin-right: 20px;
+                margin-left: 20px;
+                margin-top: 10px;
+            }
+        }
+
+        .nav-list{
+            ul{
+                margin-left: 20px;
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                align-self: center;
+
+                li {
+                    a{
+                    padding: 15px 30px;
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: $primaryColor;
+                    }
+
+                    .active{
+                        background-color: lighten($primaryColor, 55%);
+                        color: $primaryColor;
+                    }
+                }
+            }
+        }
+    }
+}

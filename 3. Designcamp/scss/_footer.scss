@@ -1,0 +1,217 @@
+.footer{
+    .more-info{
+        background-color: darken($primaryColor, 10%);
+        padding-bottom: 20px;
+
+        p{
+            color: $textColor;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        .input-email{
+            padding: 10px 0px;
+            width: 85%;
+            font-size: 18px;
+            border-style: none;
+            text-align: center;
+            display: block;
+            margin: auto;
+        }
+
+        a{
+            text-decoration: none;
+            color: $textColor;
+            background: $primaryColor;
+            padding: 5px 15px;
+            font-size: 18px;
+            display: block;
+            text-align: center;
+            width: 85%;
+            margin: auto;
+        }
+    }
+
+    .footer-words{
+        background-color: lighten($primaryColor, 35%);
+
+        p{
+            color: $primaryColor;
+            padding: 10px;
+            text-align: center;
+        }
+        span{
+            font-size: 20px;
+        }
+
+        .footer-divide{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+
+            img{
+                width: 80px;
+                margin-left: 70px;
+                margin-top: 40px;
+            }
+
+            .site-map{
+                p{
+                    color: $primaryColor;
+                }
+
+                ul{
+                    list-style: none;
+
+                    li{
+                        text-align: center;
+
+                        a{
+                            color: white;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 768px){
+    .footer{
+        .more-info{
+                padding-bottom: 45px;
+
+            p{
+                font-size: 30px;
+                padding-bottom: 20px;
+            }
+    
+            .input-email{
+                padding: 20px 0px;
+                font-size: 30px;
+            }
+    
+            a{
+                padding: 20px 15px;
+                font-size: 30px;
+                letter-spacing: 3px;
+            }
+        }
+    
+        .footer-words{
+            background-color: lighten($primaryColor, 35%);
+    
+            p{
+                font-size: 24px;
+            }
+            span{
+                font-size: 24px;
+            }
+    
+            .footer-divide{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+    
+                img{
+                    width: 120px;
+                    margin-left: 70px;
+                    margin-top: 40px;
+                }
+    
+                .site-map{   
+                    ul{
+                        list-style: none;
+    
+                        li{
+                            text-align: center;
+                            display: inline-block;
+    
+                            a{
+                                color: white;
+                                text-decoration: none;
+                                font-size: 24px;
+                                padding-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 1024px){
+    .footer{
+        .more-info{
+                padding-bottom: 45px;
+
+            p{
+                font-size: 30px;
+                padding-bottom: 20px;
+            }
+    
+            .input-email{
+                padding: 20px 0px;
+                font-size: 30px;
+            }
+    
+            a{
+                padding: 20px 15px;
+                font-size: 30px;
+                letter-spacing: 3px;
+            }
+        }
+    
+        .footer-words{
+            background-color: lighten($primaryColor, 35%);
+    
+            p{
+                font-size: 24px;
+            }
+            span{
+                font-size: 24px;
+            }
+    
+            .footer-divide{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+    
+                img{
+                    width: 150px;
+                    margin-left: 150px;
+                    margin-top: 40px;
+                }
+    
+                .site-map{
+                    text-align: center;
+                    ul{
+                        list-style: none;
+    
+                        li{
+                            text-align: center;
+                            display: inline-block;
+    
+                            a{
+                                color: white;
+                                text-decoration: none;
+                                font-size: 24px;
+                                padding-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
